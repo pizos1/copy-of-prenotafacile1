@@ -1,0 +1,33 @@
+{
+    "translation": {
+        "login": {
+            "resend_login_code": "Reinvia codice per:",
+            "mail_object": "Codice di login",
+            "mail_body": "Il codice di verfica per la login è: <<code>>",
+            "code_expired": "Codice scaduto"
+        },
+        "resetPassword": {
+            "mail_object": "Reset password",
+            "mail_body": "L'amministratore ha resettato la sua password. La nuova password è: <<password>>"
+        },
+        "changeEmail": {
+            "title": "Cambio email",
+            "body": "Abbiamo ricevuto la tua richiesta di cambio email<br/><br/>Codice cambio email: <b><<CODE>></b>"
+        },
+        "errors": {
+            "user_not_found": "Utente non trovato",
+            "profile_not_found": "Profilo non trovato",
+            "wrong_credentials": "Credenziali errate",
+            "wrong_login_code": "Codice di login errato",
+            "user_already_exists": "Utente già esistente",
+            "email_already_exists": "Email già esistente",
+            "missing_tenant": "Tenant mancante"
+        },
+        "table": {
+            "zeroDays": "0 giorni",
+            "days": "count giorni",
+            "months": "count mesi",
+            "years": "count anni"
+        }
+    }
+}

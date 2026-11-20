@@ -1,0 +1,50 @@
+{
+    "name": "prenotafacile",
+    "private": true,
+    "version": "0.0.0",
+    "description": "a Sails application",
+    "keywords": [],
+    "dependencies": {
+        "@sailshq/lodash": "^3.10.3",
+        "axios": "^1.11.0",
+        "cross-env": "^10.1.0",
+        "fs": "^0.0.1-security",
+        "jsonwebtoken": "^9.0.3",
+        "lodash": "^4.17.21",
+        "mariadb": "^2.5.6",
+        "moment": "^2.30.1",
+        "nodemailer": "^8.0.5",
+        "passport": "^0.7.0",
+        "pdfkit": "^0.18.0",
+        "qrcode": "^1.5.4",
+        "sails": "^1.5.17",
+        "sails-hook-sockets": "^3.0.0",
+        "sails-mysql": "^3.0.1"
+    },
+    "devDependencies": {
+        "eslint": "^9.34.0"
+    },
+    "scripts": {
+        "start": "cross-env NODE_ENV=production node app.js",
+        "start:dev": "cross-env NODE_ENV=development sails lift --port 3333",
+        "start:prod": "cross-env NODE_ENV=production sails lift --port 3000",
+        "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+        "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+        "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+    },
+    "main": "app.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/costaa/app_base_server.git"
+    },
+    "author": "costaa",
+    "license": "",
+    "engines": {
+        "node": "^20.11"
+    },
+    "overrides": {
+        "qs": "^6.15.0",
+        "underscore": "^1.13.1",
+        "uuid": "^11.1.0"
+    }
+}

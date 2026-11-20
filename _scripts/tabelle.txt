@@ -1,0 +1,43 @@
+// MASTER
+
+CREATE TABLE `utenti` (
+  `id_utente` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) DEFAULT NULL,
+  `id_tenant` mediumint(8) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id_utente`),
+  KEY `utenti_tenants_FK` (`id_tenant`),
+  CONSTRAINT `utenti_tenants_FK` FOREIGN KEY (`id_tenant`) REFERENCES `tenants` (`id_tenant`)
+)
+
+CREATE TABLE `tenants` (
+  `id_tenant` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `tenant` varchar(100) DEFAULT NULL,
+  `keycloak_secret` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id_tenant`)
+)
+
+
+
+
+
+
+
+// TENANT
+
+CREATE TABLE `profili` (4
+  `id_profilo` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `profilo` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id_profilo`)
+)
+
+CREATE TABLE `utenti` (
+  `id_utente` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `login_token` varchar(6) DEFAULT NULL,
+  `login_expiration` datetime DEFAULT NULL,
+  `id_profilo` mediumint(8) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id_utente`),
+  KEY `utenti_profili_FK` (`id_profilo`),
+  CONSTRAINT `utenti_profili_FK` FOREIGN KEY (`id_profilo`) REFERENCES `profili` (`id_profilo`)
+)
